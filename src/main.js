@@ -1,4 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import VueAutoHeightInput from './App.vue'
+export default {
+    install: (app) => {
+        app.component('autoheight-input', VueAutoHeightInput);
+    },
 
-createApp(App).mount('#app')
+}
+export { VueAutoHeightInput as AutoheightInput}

@@ -1,11 +1,37 @@
 {
   "name": "vue-autoheight-input",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "private": false,
+  "main": "dist/vue-autoheight-input.common.js",
+  "unpkg": "dist/vue-autoheight-input.umd.min.js",
+  "jsdelivr": "dist/vue-autoheight-input.umd.min.js",
+  "author": "Dilan Tsasi",
+  "license": "MIT",
+  "description": "A simple vuejs plugin for auto resizing the height of a textarea",
+  "files": [
+    "dist/*"
+  ],
+  "homepage": "https://github.com/DilanTsasi/vue-autoheight-input",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DilanTsasi/vue-autoheight-input.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DilanTsasi/vue-autoheight-input/issues"
+  },
+  "keywords": [
+    "vue",
+    "wrapper",
+    "editor",
+    "autosize input",
+    "textarea"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build-library": "vue-cli-service build --target lib --name vue-autoheight-input src/main.js",
+    "lint": "vue-cli-service lint",
+    "prepublishOnly": "node \"%npm_execpath%\" build"
   },
   "dependencies": {
     "core-js": "^3.6.5",
